@@ -19,7 +19,7 @@ class Dog
 
   def self.print_all
     @@all.map do |dog|
-      puts dog.name
+      puts dog.name #the instance method #name has to be used otherwise itll puts out the object_id and not the actual name 
     end
   end
 
@@ -28,7 +28,7 @@ class Dog
   end
 
   def self.clear_all
-    @@all.clear 
+    @@all.clear
   end
 
 end
