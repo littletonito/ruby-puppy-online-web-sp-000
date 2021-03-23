@@ -2,8 +2,6 @@
 
 require 'pry'
 
-
-
 class Dog
 
   attr_accessor :name
@@ -19,13 +17,9 @@ class Dog
     @@all
   end
 
-  def self.clear_all
-    @@all.clear
-  end
-
   def self.print_all
-    @@all.map do |dogs|
-       puts dogs.name #.name is an attribute of an instance 
+    @@all.each do |dog|
+      puts dog
     end
   end
 
@@ -33,5 +27,41 @@ class Dog
     @@all << self
   end
 
-
 end
+
+
+
+
+
+
+
+
+# class Dog
+#
+#   attr_accessor :name
+#
+#   @@all = []
+
+#   def initialize(name)
+#     @name = name
+#     save
+#   end
+#
+#   def self.all
+#     @@all
+#   end
+#
+#   def self.clear_all
+#     @@all.clear
+#   end
+#
+#   def self.print_all
+#     @@all.map do |dogs|
+#        puts dogs.name #.name is an attribute of an instance
+#     end
+#   end
+#
+#   def save
+#     @@all << self
+#   end
+# end
