@@ -18,8 +18,8 @@ class Dog
   end
 
   def self.print_all
-    @@all.map do |dog|
-      puts dog.name #the instance method #name has to be used otherwise itll puts out the object_id and not the actual name 
+    @@all.each do |dog|
+      puts dog.name #the instance method #name has to be used otherwise itll puts out the object_id and not the actual name
     end
   end
 
